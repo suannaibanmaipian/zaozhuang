@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>便捷出行 - 枣庄</title>
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <style>
+        .slider {
+            position: relative;
+            width: 980px;
+            height: 400px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            width: 2940px;
+            animation: slide 12s infinite;
+        }
+        .slides img {
+            width: 980px;
+            height: 400px;
+        }
+        @keyframes slide {
+            0% { margin-left: 0; }
+            33% { margin-left: 0; }
+            36% { margin-left: -980px; }
+            66% { margin-left: -980px; }
+            69% { margin-left: -1960px; }
+            99% { margin-left: -1960px; }
+            100% { margin-left: 0; }
+        }
+        .transport-section {
+            width: 980px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+        }
+        .transport-section:nth-of-type(n+2) {
+            animation-delay: 0.2s;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .transport {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+        .transport img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .transport img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 12px rgba(0,0,0,0.3);
+        }
+        .transport .desc {
+            flex: 1;
+        }
+        .transport .desc a {
+            display: inline-block;
+            margin-top: 8px;
+            color: #0066cc;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <img src="images/lunbo10.jpg" alt="枣庄城市图1">
+            <img src="images/lunbo11.jpg" alt="枣庄城市图2">
+            <img src="images/lunbo12.jpg" alt="枣庄城市图3">
+        </div>
+    </div>
+
+    <div class="nav">
+        <a href="index.html">首页</a>
+        <a href="food.html">特色美食</a>
+        <a href="live.html">舒适住宿</a>
+        <a href="transport.html">便捷出行</a>
+        <a href="travel.html">旅游景点</a>
+    </div>
+
+    <div class="transport-section">
+        <h2>🚄 铁路出行</h2>
+        <div class="transport">
+            <img src="images/高铁.jpg" alt="枣庄高铁">
+            <div class="desc">
+                <h3>枣庄西站</h3>
+                <p>京沪高铁枣庄西站，连接南北枢纽，快速抵达各大城市。</p>
+                <a href="https://www.12306.cn" target="_blank">点击购票（12306官网）</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="transport-section">
+        <h2>🚌 公交出行</h2>
+        <div class="transport">
+            <img src="images/公交.png" alt="枣庄公交">
+            <div class="desc">
+                <h3>枣庄公交系统</h3>
+                <p>覆盖主城区与周边，绿色环保便捷，使用“枣庄行”APP可查实时路线。</p>
+                <a href="http://m.zaozhuang.bendibao.com/bus/#:~:text=%E6%9E%A3%E5%BA%84%E6%9C%AC%E5%9C%B0%E5%AE%9D%E5%85%AC%E4%BA%A4%E6%9F%A5,%EF%BC%8C%E6%96%B9%E4%BE%BF%E6%82%A8%E7%9A%84%E5%87%BA%E8%A1%8C%E3%80%82" target="_blank">公交路线查询</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="transport-section">
+        <h2>🚗 自驾出行</h2>
+        <div class="transport">
+            <img src="images/高速.jpg" alt="枣庄高速">
+            <div class="desc">
+                <h3>枣庄高速网络</h3>
+                <p>多条高速公路贯通市区，适合自由行旅客使用导航自驾游。</p>
+                <a href="https://map.baidu.com/" target="_blank">使用百度地图导航</a>
+            </div>
+        </div>
+    </div>
+    <div class="feedback">
+        <h3>留言反馈</h3>
+        <form action="#">
+            <textarea name="message" placeholder="写下你的留言"></textarea>
+            <input type="submit" value="提交">
+        </form>
+    </div>
+</body>
+</html>

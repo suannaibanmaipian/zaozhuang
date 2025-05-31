@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>山东省枣庄市简介</title>
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <style>
+        .slider {
+            position: relative;
+            width: 980px;
+            height: 400px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            width: 2940px;
+            animation: slide 12s infinite;
+        }
+        .slides img {
+            width: 980px;
+            height: 400px;
+        }
+        @keyframes slide {
+            0% { margin-left: 0; }
+            33% { margin-left: 0; }
+            36% { margin-left: -980px; }
+            66% { margin-left: -980px; }
+            69% { margin-left: -1960px; }
+            99% { margin-left: -1960px; }
+            100% { margin-left: 0; }
+        }
+        .nav {
+            width: 980px;
+            height: 60px;
+            line-height: 60px;
+            background-color: #CCCCCC; 
+            margin: 10px auto; 
+            text-align: center;
+        }
+        .nav a {
+            font-size: 20px;
+            margin: 0 20px;
+            text-decoration: none;
+            color: #7f0d0d;
+            transition: transform 0.3s ease;
+        }
+        .nav a:hover {
+            transform: scale(1.1);
+            color: #f00;
+        }
+        .module-section {
+            width: 980px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .module-section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .module-section h2 {
+            color: #7f0d0d;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .module-section p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .module-section img {
+            width: 100%;
+            max-width: 960px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .module-section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <audio src="music/0.mp3" autoplay></audio>
+    <div class="slider">
+        <div class="slides">
+            <img src="images/lunbo1.jpg" alt="枣庄城市图1">
+            <img src="images/lunbo2.jpg" alt="枣庄城市图2">
+            <img src="images/lunbo3.jpg" alt="枣庄城市图3">
+        </div>
+    </div>
+    <div class="gundong">
+        <marquee><p>欢迎了解我的家乡</p></marquee>
+    </div>
+    <div class="nav">
+        <a href="index.html">首页</a>
+        <a href="food.html">特色美食</a>
+        <a href="live.html">舒适住宿</a>
+        <a href="transport.html">便捷出行</a>
+        <a href="travel.html">旅游景点</a>
+    </div>
+    <div class="main">
+        <div class="module-section">
+            <h2>政治中心</h2>
+            <p>枣庄是山东省地级市，现辖六个区（滕州为代管县级市），是中国著名的双拥模范城。</p>
+            <a href="http://www.zaozhuang.gov.cn" target="_blank">
+                <img src="images/枣庄政务图.jpg" alt="枣庄政府门户网站">
+            </a>
+        </div>
+        <div class="module-section">
+            <h2>经济发展</h2>
+            <p>枣庄拥有丰富的煤炭、石灰石等资源，是国家重要的建材、能源基地，正加速向绿色经济和高端制造转型。</p>
+            <a href="http://sfzggw.zaozhuang.gov.cn/" target="_blank">
+                <img src="images/枣庄经济图.jpg" alt="枣庄发改委网站">
+            </a>
+        </div>
+        <div class="module-section">
+            <h2>文化底蕴</h2>
+            <p>枣庄拥有北辛文化、墨子文化和运河文化，是柳琴戏、皮影戏、奚仲造车等非遗的重要发源地。</p>
+            <a href="http://swhhlyj.zaozhuang.gov.cn/" target="_blank">
+                <img src="images/枣庄文化图.jpg" alt="枣庄文化旅游局">
+            </a>
+        </div>
+        <div class="module-section">
+            <h2>科技创新</h2>
+            <p>枣庄大力发展智慧城市、人工智能与工业互联网，构建“数字枣庄”，推动科技创新赋能产业转型。</p>
+            <a href="http://zzst.zaozhuang.gov.cn/" target="_blank">
+                <img src="images/枣庄科技图.jpeg" alt="枣庄科技局网站">
+            </a>
+        </div>
+    </div>
+    <div class="foot">
+        <p>家乡介绍</p>
+    </div>
+    <div class="feedback">
+        <h3>留言反馈</h3>
+        <form action="#">
+            <textarea name="message" placeholder="写下你的留言"></textarea>
+            <input type="submit" value="提交">
+        </form>
+    </div>
+</body>
+</html>

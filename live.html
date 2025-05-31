@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>舒适住宿 - 枣庄</title>
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <style>
+        .slider {
+            position: relative;
+            width: 980px;
+            height: 400px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            width: 2940px;
+            animation: slide 12s infinite;
+        }
+        .slides img {
+            width: 980px;
+            height: 400px;
+        }
+        @keyframes slide {
+            0% { margin-left: 0; }
+            33% { margin-left: 0; }
+            36% { margin-left: -980px; }
+            66% { margin-left: -980px; }
+            69% { margin-left: -1960px; }
+            99% { margin-left: -1960px; }
+            100% { margin-left: 0; }
+        }
+        .hotel-section {
+            width: 980px;
+            margin: 30px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+        }
+        .hotel-section:nth-of-type(n+2) {
+            animation-delay: 0.2s;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hotel {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+        .hotel img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hotel img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 12px rgba(0,0,0,0.3);
+        }
+        .hotel .desc {
+            flex: 1;
+        }
+        .hotel .desc a {
+            display: inline-block;
+            margin-top: 8px;
+            color: #0066cc;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <img src="images/lunbo7.jpg" alt="枣庄城市图1">
+            <img src="images/lunbo8.jpg" alt="枣庄城市图2">
+            <img src="images/lunbo9.jpg" alt="枣庄城市图3">
+        </div>
+    </div>
+
+    <div class="nav">
+        <a href="index.html">首页</a>
+        <a href="food.html">特色美食</a>
+        <a href="live.html">舒适住宿</a>
+        <a href="transport.html">便捷出行</a>
+        <a href="travel.html">旅游景点</a>
+    </div>
+
+    <div class="hotel-section">
+        <h2>🏨 高端酒店推荐</h2>
+        <div class="hotel">
+            <img src="images/舜和大酒店.jpg" alt="枣庄喜来登酒店">
+            <div class="desc">
+                <h3>枣庄舜和大酒店</h3>
+                <p>高端配置，配套齐全，适合商务和家庭入住。</p>
+                <a href="https://hotels.ctrip.com/hotels/1732442.html?cityid=614#ctm_ref=www_hp_bs_lst" target="_blank">查看酒店详情</a>
+            </div>
+        </div>
+        <div class="hotel">
+            <img src="images/台儿庄大酒店.jpg" alt="台儿庄古城大酒店">
+            <div class="desc">
+                <h3>台儿庄大酒店</h3>
+                <p>毗邻古城，古风古韵，极具地域特色的舒适体验。</p>
+                <a href="https://hotels.ctrip.com/hotels/1715546.html?cityid=614#ctm_ref=www_hp_bs_lst" target="_blank">查看酒店详情</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="hotel-section">
+        <h2>🏠 特色客栈推荐</h2>
+        <div class="hotel">
+            <img src="images/客栈.jpg" alt="客栈">
+            <div class="desc">
+                <h3>依云·湖畔空中合院客栈</h3>
+                <p>坐落于台儿庄运河旁，环境宁静，适合慢生活体验。</p>
+                <a href="https://hotels.ctrip.com/hotels/detail/?cityId=614&checkIn=2025-05-31&checkOut=2025-06-01&hotelId=4435996&adult=1&crn=1&children=0&highprice=-1&lowprice=0&listfilter=1" target="_blank">查看详情</a>
+            </div>
+        </div>
+        <div class="hotel">
+            <img src="images/秘色轩客栈.jpg" alt="秘色轩客栈">
+            <div class="desc">
+                <h3>秘色轩客栈</h3>
+                <p>文艺清新、书香气息浓厚，是青年游客的首选。</p>
+                <a href="https://hotels.ctrip.com/hotels/detail/?hotelId=128604461&checkIn=2025-05-31&checkOut=2025-06-01&cityId=614&minprice=&mincurr=&adult=1&children=0&ages=&crn=1&curr=&fgt=&stand=&stdcode=&hpaopts=&mproom=&ouid=&shoppingid=&roomkey=&highprice=-1&lowprice=0&showtotalamt=&hotelUniqueKey=" target="_blank">查看详情</a>
+            </div>
+        </div>
+    </div>
+    <div class="feedback">
+        <h3>留言反馈</h3>
+        <form action="#">
+            <textarea name="message" placeholder="写下你的留言"></textarea>
+            <input type="submit" value="提交">
+        </form>
+    </div>
+</body>
+</html>
